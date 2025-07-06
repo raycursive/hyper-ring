@@ -1,0 +1,12 @@
+[package]
+name = "fast-ringbuffer"
+version = "0.1.0"
+edition = "2024"
+description = "A fast lock-free ring buffer implementation in Rust."
+
+[dependencies]
+crossbeam-utils = "0.8.21"
+static_assertions = "1.1.0"
+
+[dev-dependencies]
+rand = "0.9.1"
