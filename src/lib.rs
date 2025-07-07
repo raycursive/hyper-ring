@@ -147,7 +147,7 @@ mod tests {
         use std::sync::atomic::{AtomicI32, Ordering};
 
         const MAX_EVENTS: usize = 1_000_000;
-        const BUF_SIZE: usize = 32768;
+        const BUF_SIZE: usize = 1 << 10;
 
         let ring_buffer = Box::leak(Box::new(MPRingBuffer::<i32, BUF_SIZE>::new()));
         let (mut rx, mut tx) = ring_buffer.split();
